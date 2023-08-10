@@ -79,7 +79,7 @@ def extract_content_through_url(url : str)  :
 def main(): 
 
     content = extract_content_through_url(
-        "Shavilya Resume.pdf")
+        "Shavilya Resume.pdf")    # Pdf from where the text will be extracted. 
     
     print(content)
 
