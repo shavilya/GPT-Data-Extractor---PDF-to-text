@@ -20,8 +20,7 @@ import multiprocessing
 from tempfile import NamedTemporaryFile 
 
 import pandas as pd 
-import json 
-import requests 
+
 
 from src.utils import tesseract_cmd 
 
@@ -71,21 +70,9 @@ def extract_content_through_url(url : str)  :
 
     return text_with_pytesseract
 
-# 3. Extract structured info from text via LLM 
-
-
-
-
-def main(): 
-
-    content = extract_content_through_url(
-        "Shavilya Resume.pdf")    # Pdf from where the text will be extracted. 
-    
-    print(content)
-
-
 if __name__ == "__main__" : 
-
+     
+    content = extract_content_through_url('project.pdf')
+    print(content)
     
-    main()
     multiprocessing.freeze_support()
